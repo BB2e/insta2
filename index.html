@@ -66,77 +66,11 @@
                 <div class="bottom">
                     <div class="icon_box">
                         <div class="icon_left">
-                            <img src="./img/icon_heart.png" alt="">
+                            <img src="./img/icon_heart.png" alt="" class="heart">
                             <a href="./modal--personal.html"><img src="./img/icon_comment.png" alt=""></a>
                         </div>
                         <div class="icon_right">
-                            <img src="./img/saved.png" alt="">
-                        </div>
-                    </div>
-                    <div class="bottom_likes">좋아요 7,022개</div>
-                    <div class="article_box">
-                        <span>ByulStarGram</span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quos cum amet ea repellendus
-                        ipsum. Est officia neque error consequuntur autem dignissimos commodi qui, totam vitae labore
-                        non deleniti blanditiis!
-                    </div>
-                </div>
-            </div>
-            <div class="main_wrapper">
-                <div class="top">
-                    <div class="topleft">
-                        <a href="./myfeed.html">
-                            <img src="./img/pic_3.jpg" alt="프로필사진">
-                            <span>ByulStarGram</span>
-                        </a>
-                    </div>
-                    <div class="topright">
-                    </div>
-                </div>
-                <div class="middle">
-                    <img src="./img/pic_3.jpg" alt="">
-                </div>
-                <div class="bottom">
-                    <div class="icon_box">
-                        <div class="icon_left">
-                            <img src="./img/icon_heart.png" alt="">
-                            <a href="./modal--personal.html"><img src="./img/icon_comment.png" alt=""></a>
-                        </div>
-                        <div class="icon_right">
-                            <img src="./img/saved.png" alt="">
-                        </div>
-                    </div>
-                    <div class="bottom_likes">좋아요 7,022개</div>
-                    <div class="article_box">
-                        <span>ByulStarGram</span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quos cum amet ea repellendus
-                        ipsum. Est officia neque error consequuntur autem dignissimos commodi qui, totam vitae labore
-                        non deleniti blanditiis!
-                    </div>
-                </div>
-            </div>
-            <div class="main_wrapper">
-                <div class="top">
-                    <div class="topleft">
-                        <a href="./myfeed.html">
-                            <img src="./img/pic_3.jpg" alt="프로필사진">
-                            <span>ByulStarGram</span>
-                        </a>
-                    </div>
-                    <div class="topright">
-                    </div>
-                </div>
-                <div class="middle">
-                    <img src="./img/pic_3.jpg" alt="">
-                </div>
-                <div class="bottom">
-                    <div class="icon_box">
-                        <div class="icon_left">
-                            <img src="./img/icon_heart.png" alt="">
-                            <a href="./modal--personal.html"><img src="./img/icon_comment.png" alt=""></a>
-                        </div>
-                        <div class="icon_right">
-                            <img src="./img/saved.png" alt="">
+                            <img src="./img/saved.png" alt="" class="saved">
                         </div>
                     </div>
                     <div class="bottom_likes">좋아요 7,022개</div>
@@ -173,6 +107,32 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        let heart = document.querySelector('.heart');
+        heart.addEventListener('click', function(e){
+            if(e.target.classList.contains('on')){
+                e.target.src='img/icon_heart.png'
+                e.target.classList.remove('on');
+            }
+            else {
+                e.target.src='img/icon_heartB.png'
+                e.target.classList.add('on');
+            }
+        })
+
+        let saved = document.querySelector('.saved');
+        saved.addEventListener('click', function(e){
+            if(e.target.classList.contains('on')){
+                e.target.src='img/saved.png'
+                e.target.classList.remove('on');
+            }
+            else {
+                e.target.src='img/savedB.png'
+                e.target.classList.add('on');
+            }
+        })
+    </script>
 </body>
 
 

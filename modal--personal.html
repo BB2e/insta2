@@ -15,6 +15,9 @@
 
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <script src="./javascript/modal--personal.js" defer></script>
+    <script src="./javascript/slider.js" defer></script>
 </head>
 
 <body>
@@ -239,11 +242,11 @@
                         <div class="bottom">
                             <div class="btn_collect">
                                 <div class="left">
-                                    <img src="./img/icon_heart.png" alt="">
+                                    <img src="./img/icon_heart.png" alt="" class="heart">
                                     <!-- <img src="./img/icon_comment.png" alt=""> -->
                                 </div>
                                 <div class="right">
-                                    <img src="./img/saved.png" alt="" style="width: 20px;height: 24px;">
+                                    <img src="./img/saved.png" alt="" style="width: 20px;height: 24px;" class="saved">
                                 </div>
                             </div>
                             <div class="likes text-mb">좋아요 4개</div>
@@ -316,8 +319,31 @@
         </div>
     </div>
 
-    <script src="./javascript/modal--personal.js"></script>
-    <script src="./javascript/slider.js"></script>
+    <script>
+        let heart = document.querySelector('.heart');
+        heart.addEventListener('click', function(e){
+            if(e.target.classList.contains('on')){
+                e.target.src='img/icon_heart.png'
+                e.target.classList.remove('on');
+            }
+            else {
+                e.target.src='img/icon_heartB.png'
+                e.target.classList.add('on');
+            }
+        })
+
+        let saved = document.querySelector('.saved');
+        saved.addEventListener('click', function(e){
+            if(e.target.classList.contains('on')){
+                e.target.src='img/saved.png'
+                e.target.classList.remove('on');
+            }
+            else {
+                e.target.src='img/savedB.png'
+                e.target.classList.add('on');
+            }
+        })
+    </script>
 </body>
 
 </html>
